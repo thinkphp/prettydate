@@ -14,7 +14,10 @@
    <script type="text/javascript" src="prettydate.js"></script>
    <script type="text/javascript">
      window.addEvent('domready', function() {
+
+            //apply `prettyDate` method to all elements "A" with class "pretty"
             $$('a.pretty').prettyDate(); 
+
             var options = {
              now      : "a l'instant",
              minute   : "il y a 1 minute",
@@ -25,7 +28,8 @@
              days     : " il y a {x} jours",
              weeks    : " il y a {x} semaines"             
             };
-            $$('a.pretty2').prettyDate(options);              
+             
+            new PrettyDate($$('a.pretty2'),options);
      });
    </script>
 </head>
