@@ -1,3 +1,20 @@
+/*
+---
+description: This plugin provides a way to format JavaScript dates in the style of Twitter's timeline: "just now", "about 8 minutes ago","about 11 hours ago","yesterday". The method is, originally, written by John Resig.
+
+authors:
+- Adrian Statescu (http://thinkphp.ro)
+
+license:
+- MIT-style license
+
+requires:
+ core/1.3.1: '*'
+
+provides: [PrettyDate]
+...
+*/
+
      var PrettyDate = new Class({
 
          /* Implements */
