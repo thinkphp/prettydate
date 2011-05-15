@@ -72,6 +72,7 @@
      Element.implement({
              prettyDate: function(options) {
                    new PrettyDate(this,options);
+               return this;
              } 
      });
 

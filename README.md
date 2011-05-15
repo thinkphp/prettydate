@@ -5,7 +5,7 @@ This plugin provides a way to format JavaScript dates in the style of Twitter's 
 "just now", "about 8 minutes ago","about 11 hours ago","yesterday". 
 The method is, originally, written by [John Resig](http://ejohn.org/blog/javascript-pretty-date/).
 
-![Screenshot]()
+![Screenshot](http://farm4.static.flickr.com/3229/5721430624_80ab38a116.jpg)
 
 How to use
 ----------
@@ -18,7 +18,7 @@ First you must to include the JS files in the head of your HTML document.
         <script type="text/javascript" src="prettydate.js"></script>
 
 
-You need to specify the source of the ISO8601-date
+You need to specify the source of the ISO8601-date.
 
        #HTML
        <ul>
@@ -30,6 +30,8 @@ You need to specify the source of the ISO8601-date
        <li>@<a href="#">yui</a> just happened here <span><br/><i>posted</i> <a class="pretty" href="#" title="2011-05-12 14:54:28">Sun May 14 19:54:28 +0000 2011</a></span></li>
        </ul>
 
+Then you can apply the method.
+
        #JS
        window.addEvent('domready', function() {
               new PrettyDate($$("a.pretty"));
@@ -37,7 +39,7 @@ You need to specify the source of the ISO8601-date
 
        OR
 
-       //apply prettyDate method to those;
+       //apply `prettyDate` method to those;
        window.addEvent('domready', function() {
               $$("a.pretty").prettyDate(); 
        });       
