@@ -1,4 +1,10 @@
 Class: PrettyDate (#PrettyDate)
+===============================
+
+This plugin provides a way to format JavaScript dates in the style of Twitter's timeline: 
+"just now", "about 8 minutes ago","about 11 hours ago","yesterday". 
+The method is, originally, written by [John Resig](http://ejohn.org/blog/javascript-pretty-date/).
+
 
 ###Implements:
 
