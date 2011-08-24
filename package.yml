@@ -1,6 +1,6 @@
 name: PrettyDate
-author: thinkphp
-current: v1.0
+authors: thinkphp,fitorec
+current: v1.1
 category: utilities
 tags: [date,iso8601,time]
 docs: https://github.com/thinkphp/prettydate/blob/master/Docs/PrettyDate.md

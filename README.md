@@ -62,4 +62,23 @@ ex: french localization:
             };
             $$('a.pretty').prettyDate(options); 
        });
-         
+
+Files
+-------------------------------------------------------------
+	  prettydate/
+				|-- demo
+				|   `-- prettydate.html
+				|-- Docs
+				|   `-- PrettyDate.md
+				|-- package.yml
+				|-- README.md
+				`-- Source
+					`-- prettydate
+						|-- lang
+						|   |-- de.js
+						|   |-- es.js
+						|   `-- fr.js
+						|-- prettydate.js
+						`-- prettydate-yui-compressed.js
+
+				5 directories, 9 files

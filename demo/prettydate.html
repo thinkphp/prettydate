@@ -11,13 +11,15 @@
    </style>
    <script src="http://www.google.com/jsapi?key=ABQIAAAA1XbMiDxx_BTCY2_FkPh06RRaGTYH6UMl8mADNa0YKuWNNa8VNxQEerTAUcfkyrr6OwBovxn7TDAH5Q"></script>
    <script type="text/javascript">google.load("mootools", "1.3");</script>
-   <script type="text/javascript" src="prettydate.js"></script>
+
+   <script type="text/javascript" src="../Source/prettydate/prettydate.js"></script>
+   <script type="text/javascript" src="../Source/prettydate/lang/es.js"></script>
    <script type="text/javascript">
      window.addEvent('domready', function() {
-
+			//new Date("2011/05/14 21:43:40")
             //apply `prettyDate` method to all elements "A" with class "pretty"
-            $$('a.pretty').prettyDate(); 
-
+            $$('a.pretty').prettyDate({'timeNow': new Date("2011/05/14 21:43:40") }); 
+;
             var options = {
              now      : "a l'instant",
              minute   : "il y a 1 minute",
@@ -26,7 +28,8 @@
              hours    : "il y a {x} heures",
              yesterday: " hier",
              days     : " il y a {x} jours",
-             weeks    : " il y a {x} semaines"             
+             weeks    : " il y a {x} semaines",
+             'timeNow': new Date("2011/05/14 21:43:40")
             };
              
             new PrettyDate($$('a.pretty2'),options);
@@ -36,10 +39,12 @@
 <body>
 <h1>Plugin PrettyDate MooTools</h1>
 <ul>
-<li>@<a href="#">john</a> just happened here <span><br/><i>posted</i> <a class="pretty" href="#" title="2011-05-14 20:35:28">Sun May 14 20:35:28 +0000 2011</a></span></li>
-<li>@<a href="#">code</a> just happened here <span><br/><i>posted</i> <a class="pretty" href="#" title="2011-05-14 19:15:28">Sun May 14 19:15:28 +0000 2011</a></span></li>
-<li>@<a href="#">php</a> just happened here <span><br/><i>posted</i> <a class="pretty" href="#" title="2011-05-14 10:54:28">Sun May 14  10:54:28 +0000 2011</a></span></li>
+<li>@<a href="#">thinkphp</a> just happened here <span><br/><i>posted</i> <a class="pretty" href="#" title="2011-05-14 20:35:28">Sun May 14 20:35:28 +0000 2011</a></span></li>
+
+<li>@<a href="#">fitorec</a> Hi I'm trying to help translate this plugin into Spanish<span><br/><i>posted</i> <a class="pretty" href="#" title="2011-05-14 19:15:28">Sun May 14 19:15:28 +0000 2011</a></span></li>
+<li>@<a href="#">fitorec</a> and also translated into other languages <span><br/><i>posted</i> <a class="pretty" href="#" title="2011-05-14 10:54:28">Sun May 14  10:54:28 +0000 2011</a></span></li>
 <li>@<a href="#">mootools</a> just happened here <span><br/><i>posted</i> <a class="pretty" href="#" title="2011-05-14 21:40:28">Sun May 14 21:40:28 +0000 2011</a></span></li>
+
 <li>@<a href="#">jquery</a> just happened here <span><br/><i>posted</i> <a class="pretty" href="#" title="2011-05-13 12:54:28">Sun May 14 12:54:28 +0000 2011</a></span></li>
 <li>@<a href="#">yui</a> just happened here <span><br/><i>posted</i> <a class="pretty" href="#" title="2011-05-12 14:54:28">Sun May 14 19:54:28 +0000 2011</a></span></li>
 </ul>
@@ -47,9 +52,11 @@
 <ul>
 <li>@<a href="#">john</a> just happened here <span><br/><i>posted</i> <a class="pretty2" href="#" title="2011-05-14 20:35:28">Sun May 14 20:35:28 +0000 2011</a></span></li>
 <li>@<a href="#">code</a> just happened here <span><br/><i>posted</i> <a class="pretty2" href="#" title="2011-05-14 19:15:28">Sun May 14 19:15:28 +0000 2011</a></span></li>
+
 <li>@<a href="#">php</a> just happened here <span><br/><i>posted</i> <a class="pretty2" href="#" title="2011-05-14 10:54:28">Sun May 14  10:54:28 +0000 2011</a></span></li>
 <li>@<a href="#">mootools</a> just happened here <span><br/><i>posted</i> <a class="pretty2" href="#" title="2011-05-14 21:40:28">Sun May 14 21:40:28 +0000 2011</a></span></li>
 <li>@<a href="#">jquery</a> just happened here <span><br/><i>posted</i> <a class="pretty2" href="#" title="2011-05-13 12:54:28">Sun May 14 12:54:28 +0000 2011</a></span></li>
+
 <li>@<a href="#">yui</a> just happened here <span><br/><i>posted</i> <a class="pretty2" href="#" title="2011-05-12 14:54:28">Sun May 14 19:54:28 +0000 2011</a></span></li>
 </ul>
 <div style="clear:both;margin-left: 55px">Fixed Date: new Date("2011/05/14 21:43:40");</div>
