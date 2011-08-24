@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+   <link rel="stylesheet" href="http://yui.yahooapis.com/2.7.0/build/base/base.css" type="text/css">
+   <title>Plugin PrettyDate MooTools</title>
+   <style type="text/css">
+    html,body{background:#fff;font-family:calibri,verdana,arial,sans-serif;}
+    h1{font-size:300%;margin:0;text-align:left;color:#3c3}
+   ul{float: left}
+   </style>
+   <script src="http://www.google.com/jsapi?key=ABQIAAAA1XbMiDxx_BTCY2_FkPh06RRaGTYH6UMl8mADNa0YKuWNNa8VNxQEerTAUcfkyrr6OwBovxn7TDAH5Q"></script>
+   <script type="text/javascript">google.load("mootools", "1.3");</script>
+
+   <script type="text/javascript" src="../Source/prettydate/prettydate-yui-compressed.js"></script>
+   <script type="text/javascript" src="../Source/prettydate/lang/de.js"></script>
+   <script type="text/javascript">
+     window.addEvent('domready', function() {
+            $$('a.pretty').prettyDate({timeNow:new Date("2011/08/24 13:43:40")});
+            var options = {
+             now      : "a l'instant",
+             minute   : "il y a 1 minute",
+             minutes  : "il y a {x} minutes",
+             hour     : "il y a 1 heure",
+             hours    : "il y a {x} heures",
+             yesterday: " hier",
+             days     : " il y a {x} jours",
+             weeks    : " il y a {x} semaines"
+            };
+             
+            new PrettyDate($$('a.pretty2'),options);
+     });
+   </script>
+</head>
+<body>
+<h1>Plugin PrettyDate MooTools</h1>
+<ul>
+<li>@<a href="#">thinkphp</a> just happened here <span><br/><i>posted</i> <a class="pretty" href="#" title="2011-08-24 11:35:28">Wed Aug 24 11:35:28 +0000 2011</a></span></li>
+
+<li>@<a href="#">fitorec</a> Hi I'm trying to help translate this plugin into Spanish<span><br/><i>posted</i> <a class="pretty" href="#" title="2011-08-24 12:15:28">Wed Aug 24 12:15:28 +0000 2011</a></span></li>
+<li>@<a href="#">fitorec</a> and also translated into other languages <span><br/><i>posted</i> <a class="pretty" href="#" title="2011-08-24 10:54:28">Wed Aug 24  10:54:28 +0000 2011</a></span></li>
+<li>@<a href="#">mootools</a> just happened here <span><br/><i>posted</i> 
+<a class="pretty" href="#" title="2011-08-24 12:39:30">Wed Aug 24 12:39:30 +0000 2011</a></span></li>
+
+<li>@<a href="#">jquery</a> just happened here <span><br/><i>posted</i> 
+<a class="pretty" href="#" title="2011-08-24 12:50:28">Wed Aug 24 12:54:28 +0000 2011</a></span></li>
+
+<li>@<a href="#">yui</a> just happened here <span><br/><i>posted</i> <a class="pretty" href="#" title="2011-05-12 14:54:28">Wed Aug 24 19:54:28 +0000 2011</a></span></li>
+</ul>
+
+<ul>
+<li>@<a href="#">john</a> just happened here <span><br/><i>posted</i> <a class="pretty2" href="#" title="2011-07-24 20:35:28">Wed Aug 24 20:35:28 +0000 2011</a></span></li>
+<li>@<a href="#">code</a> just happened here <span><br/><i>posted</i> <a class="pretty2" href="#" title="2011-07-24 12:15:28">Wed Aug 24 12:15:28 +0000 2011</a></span></li>
+
+<li>@<a href="#">php</a> just happened here <span><br/><i>posted</i> <a class="pretty2" href="#" title="2011-07-24 10:54:28">Wed Aug 24  10:54:28 +0000 2011</a></span></li>
+<li>@<a href="#">mootools</a> just happened here <span><br/><i>posted</i> <a class="pretty2" href="#" title="2011-07-24 12:40:01">Wed Aug 24 12:40:01 +0000 2011</a></span></li>
+<li>@<a href="#">jquery</a> just happened here <span><br/><i>posted</i> <a class="pretty2" href="#" title="2011-06-24 12:54:28">Wed Aug 24 12:54:28 +0000 2011</a></span></li>
+
+<li>@<a href="#">yui</a> just happened here <span><br/><i>posted</i> <a class="pretty2" href="#" title="2011-05-12 14:54:28">Wed Aug 24 19:54:28 +0000 2011</a></span></li>
+</ul>
+
+</body>
+</html>

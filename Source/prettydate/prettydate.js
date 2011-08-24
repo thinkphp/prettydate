@@ -40,13 +40,8 @@ provides:
          initialize: function(elems,options) {
 			 //load now
 				//load the template languages
-               if (typeof(prettyDateLang) != 'undefined'){
-					/*if(typeof(options)!= 'undefined' && typeof(options.lang)!= 'undefined' &&
-					 options.lang == prettyDateLang.lang)
-						options = $merge(this.options, prettyDateLang);
-					else*/
+               if (typeof(prettyDateLang) != 'undefined')
 						this.options = $merge(this.options, prettyDateLang);
-				}
                this.setOptions(options);
                if($type(elems) == 'array') {
 
