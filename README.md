@@ -44,31 +44,44 @@ Then you can apply the method.
               $$("a.pretty").prettyDate(); 
        });       
 
- 
-To localize this plugin overwrite the options. 
-ex: french localization:
 
+localize 
+--------------------------------------------
+
+To localize this plugin :
+ex: french localization:
+		#HTML
+		<script type="text/javascript" src="../Source/prettydate/lang/fr.js"></script>
        #JS 
        window.addEvent('domready', function() {
-           var options = {
-             now      : "a l'instant",
-             minute   : "il y a 1 minute",
-             minutes  : "il y a {x} minutes",
-             hour     : "il y a 1 heure",
-             hours    : "il y a {x} heures",
-             yesterday: " hier",
-             days     : " il y a {x} jours",
-             weeks    : " il y a {x} semaines",
-             months   : " il y a {x} months"
-           };
             $$('a.pretty').prettyDate(options); 
        });
+
+Or you can overwrite the options. ex: french localization:
+
+   #JS 
+   window.addEvent('domready', function() {
+       var options = {
+         now      : "a l'instant",
+         minute   : "il y a 1 minute",
+         minutes  : "il y a {x} minutes",
+         hour     : "il y a 1 heure",
+         hours    : "il y a {x} heures",
+         yesterday: " hier",
+         days     : " il y a {x} jours",
+         weeks    : " il y a {x} semaines",
+         months   : " il y a {x} months"
+       };
+        $$('a.pretty').prettyDate(options); 
+   });
 
 Files
 -------------------------------------------------------------
 	  prettydate.
 				|-- demo
-				|   `-- prettydate.html
+				|   |-- prettydate-de.html 	<-- Germany example with the yui compressed package
+				|   |-- prettydate-es.html 	<-- Spanish example with the yui compressed package
+				|   `-- prettydate.html  	<-- normal example 
 				|-- Docs
 				|   `-- PrettyDate.md
 				|-- package.yml
@@ -76,10 +89,11 @@ Files
 				`-- Source
 					`-- prettydate
 						|-- lang
-						|   |-- de.js
-						|   |-- es.js
-						|   `-- fr.js
-						|-- prettydate.js
+						|   |-- de.js	<-- Germany Location
+						|   |-- en.js	<-- English Location
+						|   |-- es.js	<-- Spanish Location
+						|   `-- fr.js		<-- French Location
+						|-- prettydate.js	<-- prettyDate object
 						`-- prettydate-yui-compressed.js
 
-				5 directories, 9 files
+	5 directories, 12 files
