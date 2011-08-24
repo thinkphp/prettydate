@@ -32,6 +32,7 @@ provides:
              yesterday: " yesterday",
              days     : " about {x} days ago",
              weeks    : " aboutn {x} weeks ago",
+             months    : " approx {x} months ago",
              timeNow  : new Date(),
          },
 
@@ -71,20 +72,21 @@ provides:
                diff = ((this.options.timeNow.getTime() - date.getTime()) / 1000),
                day_diff = Math.floor(diff / 86400);
 
-               if(isNaN(day_diff) || day_diff < 0 || day_diff >= 31) {
+               if(isNaN(day_diff) || day_diff < 0 ) {
                   return;
+                  alert(day_diff);
                }
-
                return day_diff == 0 && (
-                          diff < 60 && this.options.now || 
-                          diff < 120 && this.options.minute || 
-                          diff < 3600  &&  this.options.minutes.replace("{x}",Math.floor( diff / 60)) ||
-                          diff < 7200  &&  this.options.hour || 
-                          diff < 86400 &&  this.options.hours.replace("{x}",Math.floor(diff / 3600))
+							  diff < 60 && this.options.now || 
+							  diff < 120 && this.options.minute || 
+							  diff < 3600  &&  this.options.minutes.replace("{x}",Math.floor( diff / 60)) ||
+							  diff < 7200  &&  this.options.hour || 
+							  diff < 86400 &&  this.options.hours.replace("{x}",Math.floor(diff / 3600))
                           ) ||
                           day_diff == 1 && this.options.yesterday || 
                                day_diff < 7 && this.options.days.replace("{x}",day_diff) ||
-                                      day_diff < 31  && this.options.weeks.replace("{x}",Math.ceil( day_diff / 7 )); 
+                                      day_diff < 31  && this.options.weeks.replace("{x}",Math.ceil( day_diff / 7 ))  ||
+                                      day_diff >= 31 && this.options.months.replace("{x}",Math.ceil( day_diff / 30 ));
           },
      
      });    
