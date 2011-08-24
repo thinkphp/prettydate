@@ -50,7 +50,7 @@ ex: french localization:
 
        #JS 
        window.addEvent('domready', function() {
-            var options = {
+           var options = {
              now      : "a l'instant",
              minute   : "il y a 1 minute",
              minutes  : "il y a {x} minutes",
@@ -58,14 +58,15 @@ ex: french localization:
              hours    : "il y a {x} heures",
              yesterday: " hier",
              days     : " il y a {x} jours",
-             weeks    : " il y a {x} semaines"             
-            };
+             weeks    : " il y a {x} semaines",
+             months   : " il y a {x} months"
+           };
             $$('a.pretty').prettyDate(options); 
        });
 
 Files
 -------------------------------------------------------------
-	  prettydate/
+	  prettydate.
 				|-- demo
 				|   `-- prettydate.html
 				|-- Docs

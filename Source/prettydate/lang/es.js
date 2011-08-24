@@ -18,14 +18,14 @@ provides:
 ...
 */
 prettyDateLang = {
-             lang      : "es",
+             lang     : "es",
              now      : "Ahora",
              minute   : "Hace 1 Minuto",
              minutes  : "Hace {x} Minutos",
              hour     : "Hace 1 Hora",
              hours    : "Hace {x} Horas",
-             yesterday: "Ayer",
-             days     : "Hace {x} Días",
-             weeks    : "Hace {x} Semanas",
-             months    : "Aprox {x} Meses"
+             yesterday: " Ayer",
+             days     : " Hace {x} Días",
+             weeks    : " Hace {x} Semanas",
+             months   : "Aprox {x} Meses"
 }
