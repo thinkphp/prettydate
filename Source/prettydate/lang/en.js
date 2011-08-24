@@ -27,5 +27,5 @@ prettyDateLang = {
              yesterday: " yesterday",
              days     : "about {x} days ago",
              weeks    : "about {x} weeks ago",
-             months   : "approx {x} months ago"
+             months   : "about {x} months ago"
 }

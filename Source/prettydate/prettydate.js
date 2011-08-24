@@ -25,14 +25,14 @@ provides:
          /* options */
          options: {
              now      : "just now",
-             minute   : "abount 1 minute ago",
+             minute   : "about 1 minute ago",
              minutes  : "about {x} minutes ago",
              hour     : "about 1 hour ago",
              hours    : "about {x} hours ago",
              yesterday: " yesterday",
-             days     : " about {x} days ago",
-             weeks    : " aboutn {x} weeks ago",
-             months    : " approx {x} months ago",
+             days     : "about {x} days ago",
+             weeks    : "about {x} weeks ago",
+             months    : "about {x} months ago",
              timeNow  : new Date(),
          },
 
