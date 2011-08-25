@@ -24,7 +24,7 @@ provides:
 
          /* options */
          options: {
-             now      : "just now",
+             now      : "about {x} seconds ago",
              minute   : "about 1 minute ago",
              minutes  : "about {x} minutes ago",
              hour     : "about 1 hour ago",
@@ -32,8 +32,9 @@ provides:
              yesterday: " yesterday",
              days     : "about {x} days ago",
              weeks    : "about {x} weeks ago",
-             months    : "about {x} months ago",
+             months   : "about {x} months ago",
              timeNow  : new Date(),
+             elems	: null
          },
 
          /* constructor of class - initialize */
@@ -43,9 +44,13 @@ provides:
                if (typeof(prettyDateLang) != 'undefined')
 						this.options = $merge(this.options, prettyDateLang);
                this.setOptions(options);
-               if($type(elems) == 'array') {
-
-                  elems.each(function(elem) {
+               this.options.elems=elems;
+               this.update();
+               //this.update.periodical(5000, this);
+         },
+       update: function(){
+		   if($type(this.options.elems) == 'array') {
+                  this.options.elems.each(function(elem) {
                         var pretty = this.format(elem.get('title'));
                             if(pretty) {
                                elem.set('text',pretty);
@@ -53,13 +58,12 @@ provides:
                   }, this); 
 
                } else {
-                        var pretty = this.format(elems.get('title'));
+                        var pretty = this.format(this.options.elems.get('title'));
                             if(pretty) {
-                               elems.set('text',pretty); 
+                               this.options.elems.set('text',pretty); 
                             }
-               }     
-         },
-       
+               }
+		},
          /* the method written by John Resig, improving a bit */
          format: function(time){
 
@@ -72,7 +76,7 @@ provides:
                   alert(day_diff);
                }
                return day_diff == 0 && (
-							  diff < 60 && this.options.now || 
+							  diff < 60 && this.options.now.replace("{x}",Math.floor(diff)) || 
 							  diff < 120 && this.options.minute || 
 							  diff < 3600  &&  this.options.minutes.replace("{x}",Math.floor( diff / 60)) ||
 							  diff < 7200  &&  this.options.hour || 

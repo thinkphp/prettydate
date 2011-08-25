@@ -19,7 +19,7 @@ provides:
 */
 prettyDateLang = {
              lang     : "de",
-             now      : "soeben",
+             now      : "ca. {x} Sekunden",
              minute   : "ca. 1 Minute vor",
              minutes  : "ca. {x} Minuten",
              hour     : "ca. 1 Stunde",
