@@ -32,6 +32,8 @@ PrettyDate Method: constructor (#PrettyDate: constructor)
 * yesterday - (*String*, default to 'yesterday')             -
 * days      - (*String*, default to 'about {x} days ago')    -
 * weeks     - (*String*, default to 'about {x} weeks ago')   -
+* timeNow   - (*Object Time*, to evaluate current time (difference) -
+* lang   	- (*string*, lengua, define si realiza la combinación con las opciones -
                           
 
 ### Returns

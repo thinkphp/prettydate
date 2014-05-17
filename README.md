@@ -13,10 +13,12 @@ How to use
 First you must to include the JS files in the head of your HTML document.
 
         #HTML
-        <script src="http://www.google.com/jsapi?key=ABQIAAAA1XbMiDxx_BTCY2_FkPh06RRaGTYH6UMl8mADNa0YKuWNNa8VNxQEerTAUcfkyrr6OwBovxn7TDAH5Q"></script>
-        <script type="text/javascript">google.load("mootools", "1.3");</script>
-        <script type="text/javascript" src="prettydate.js"></script>
-
+        <!-- load Mootools core -->
+        <script src="https://ajax.googleapis.com/ajax/libs/mootools/1.3.0/mootools.js"></script>
+        <!-- load prettyDate object -->
+        <script type="text/javascript" src="prettydate/prettydate.js"></script>
+        <!-- load Spanish locatize for prettyDate  -->
+		<script type="text/javascript" src="prettydate/lang/es.js"></script>
 
 You need to specify the source of the ISO8601-date.
 
@@ -44,22 +46,57 @@ Then you can apply the method.
               $$("a.pretty").prettyDate(); 
        });       
 
- 
-To localize this plugin overwrite the options. 
+
+localize and overwrite the options
+--------------------------------------------
+
+To localize this plugin :
 ex: french localization:
 
-       #JS 
-       window.addEvent('domready', function() {
-            var options = {
-             now      : "a l'instant",
-             minute   : "il y a 1 minute",
-             minutes  : "il y a {x} minutes",
-             hour     : "il y a 1 heure",
-             hours    : "il y a {x} heures",
-             yesterday: " hier",
-             days     : " il y a {x} jours",
-             weeks    : " il y a {x} semaines"             
-            };
-            $$('a.pretty').prettyDate(options); 
-       });
-         
+	#HTML
+	<script type="text/javascript" src="../Source/prettydate/lang/fr.js"></script>
+	#JS 
+	window.addEvent('domready', function() {
+		$$('a.pretty').prettyDate(options); 
+	});
+
+Or you can overwrite the options. ex: french localization:
+
+	#JS 
+	window.addEvent('domready', function() {
+		var options = {
+			now      : "a l'instant",
+			minute   : "il y a 1 minute",
+			minutes  : "il y a {x} minutes",
+			hour     : "il y a 1 heure",
+			hours    : "il y a {x} heures",
+			yesterday: " hier",
+			days     : " il y a {x} jours",
+			weeks    : " il y a {x} semaines",
+			months   : " il y a {x} months"
+		};
+		$$('a.pretty').prettyDate(options); 
+	});
+
+Files lists
+-------------------------------------------------------------
+	  prettydate.
+				|-- demo
+				|   |-- prettydate-de.html 	<-- Germany example with the yui compressed package
+				|   |-- prettydate-es.html 	<-- Spanish example with the yui compressed package
+				|   `-- prettydate.html  	<-- normal example 
+				|-- Docs
+				|   `-- PrettyDate.md
+				|-- package.yml
+				|-- README.md
+				`-- Source
+					`-- prettydate
+						|-- lang
+						|   |-- de.js	<-- Germany Location
+						|   |-- en.js	<-- English Location
+						|   |-- es.js	<-- Spanish Location
+						|   `-- fr.js		<-- French Location
+						|-- prettydate.js	<-- prettyDate object
+						`-- prettydate-yui-compressed.js
+
+	5 directories, 12 files
